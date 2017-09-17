@@ -1,0 +1,51 @@
+@import "compass/css3";
+
+html,
+body {
+    height: 100%;
+}
+body {
+    text-align: center;
+    font-family: 'Chewy', cursive;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("/bg.jpg");
+    background-repeat: repeat-y repeat-x;
+}
+.container {
+    font-size: 10em;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    overflow: visible;
+}
+
+/* Link animation */
+
+.cool-link {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    /* transition: width .3s; */
+}
