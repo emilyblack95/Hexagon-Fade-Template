@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- Author: Emily Black, 07/01/17 -->
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Emily B.</title>
+		
+		<!-- CSS imports -->
+		<link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Baloo+Bhaijaan|Chewy|Passion+One" rel="stylesheet"> 
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+		
+		<!-- JavaScript imports -->
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/type-it.js"></script>
+		
+	</head>
+	<body>
+		<div class="container" id="container">
+			<span id="textArea" class="type-it" style="color:#ffffff;"></span>
+		</div>
+		<script type="text/javascript">
+				var firstH = "Hello";
+				var secondH = "I'm Emily.";
+				var thirdH = "Get to know <a onclick='about()' href='#' style='color: #ffffff; text-decoration: none;' class='cool-link'>me</a>.";
+				var fourthH = "<a href='EmilyBlackResume.pdf' style='font-size: 40%; color: #ffffff; text-decoration: none;' class='cool-link'>Resume</a>   <a href='https://github.com/EmilyBlack95' style='font-size: 40%; color: #ffffff; text-decoration: none;' class='cool-link'>GitHub</a>   <a href='https://linkedin.com/in/EmilyBlack95/' style='font-size: 40%; color: #ffffff; text-decoration: none;' class='cool-link'>LinkedIn</a>   <a href='mailto:emily@ou.edu' style='font-size: 40%; color: #ffffff; text-decoration: none;' class='cool-link'>Email</a>";
+				var firstA = "Born in Jacksonville, FL in late 1995, I was fortunate enough to grow up with the rapid changes in technology. I got to witness the end of some technologies and the advent of other technologies. The first computer language I learned was HTML - back when MySpace was a thing and you could customize profiles by embedding HTML. This happened at the age of 12. After buffing up a bit on HTML in high school, my first year of college unfolded and Java was the second computer language I learned. Ever since then, I've considered myself devoted to computer science. ❤";
+				var secondA = "My hobbies include: Exercising • Gaming • Designing • Coding";
+				var thirdA = "Want to go <a onclick='home()' href='#' style='color: #ffffff; text-decoration: none;' class='cool-link'>back</a>?"
+				var space = "&nbsp;"
+				
+				home();
+				
+				function about() {
+					document.getElementById("container").style.fontSize = "2em";
+					$('.type-it').typeIt({
+						startDelete: true,
+						strings: [firstA, space, secondA, space, thirdA]
+					});
+				}
+				
+				function home() {
+					document.getElementById("container").style.fontSize = "5em";
+					$('.type-it').typeIt({
+						startDelete: true,
+						strings: [firstH, secondH, thirdH, space, fourthH]
+					});
+				}
+		</script>
+	</body>
+</html>
